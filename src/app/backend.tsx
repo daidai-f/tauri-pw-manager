@@ -28,3 +28,6 @@ export const login = (username: string, password: string) =>
 export const logout = () => call("logout");
 export const create_account = (username: string, password: string) =>
   call("create_account", { username, password });
+export const window_close = () => call("window_close");
+export const window_minimize = () => call("window_minimize");
+export const window_toggle_fullscreen = () => call("window_toggle_fullscreen");
