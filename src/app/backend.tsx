@@ -26,3 +26,5 @@ async function call<T = undefined>(
 export const login = (username: string, password: string) =>
   call("login", { username, password });
 export const logout = () => call("logout");
+export const create_account = (username: string, password: string) =>
+  call("create_account", { username, password });
