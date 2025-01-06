@@ -16,11 +16,22 @@ const theme = createTheme({
     primary: { main: "#ff6ac1" },
     secondary: { main: "#ff6ac1" },
   },
-  typography: { fontFamily: "Cascadia Mono" },
+  typography: { fontFamily: "CascadiaMono" },
   components: {
+    MuiTextField: {
+      defaultProps: {
+        spellCheck: false,
+      },
+      styleOverrides: {
+        root: {
+          minWidth: "300px",
+        },
+      },
+    },
     MuiCssBaseline: {
       styleOverrides: `
         @font-face {
+          font-family: 'CascadiaMono';
           src: url(${CascadiaMono}) format('woff2');
         }
       `,
