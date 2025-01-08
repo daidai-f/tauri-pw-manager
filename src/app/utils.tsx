@@ -8,7 +8,7 @@ import {
 } from "@mui/material";
 import { Visibility, VisibilityOff } from "@mui/icons-material";
 
-export type Page = "login" | "signup";
+export type Page = "login" | "signup" | "main";
 
 export type PageProps = {
   goToPage: (p: Page) => void;

@@ -20,6 +20,7 @@ import {
 import { Page, PageContext } from "./utils";
 import LoginPage from "./login/page";
 import SignUpPage from "./signup/page";
+import MainPage from "./main/page";
 import theme from "./style/theme";
 
 const TitleBar = () => (
@@ -68,10 +69,12 @@ const TitleBar = () => (
 const backPages = {
   login: undefined,
   signup: "login",
+  main: "main",
 };
 const pageComponents = {
   login: LoginPage,
   signup: SignUpPage,
+  main: MainPage,
 };
 
 function App() {

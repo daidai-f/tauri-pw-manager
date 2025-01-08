@@ -1,7 +1,7 @@
 "use client";
 
 import { useContext, useState } from "react";
-// import { useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 import { Stack, Button, TextField, Typography, Box } from "@mui/material";
 import { useAsyncEffect, PasswordField, PageContext } from "../utils";
 import { login, logout } from "../backend";
@@ -10,7 +10,7 @@ export default function LoginPage() {
   const { goToPage, showAlert } = useContext(PageContext);
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  // const router = useRouter();
+  const router = useRouter();
 
   useAsyncEffect(async () => {
     await logout();
@@ -21,8 +21,8 @@ export default function LoginPage() {
     if (password === "") return showAlert("Master password missing.");
     const res = await login(username, password);
     if (!res.ok) return showAlert(res.error);
-    // goToPage("main");
-    // router.push("/main");
+    goToPage("main");
+    router.push("/main");
   };
 
   return (
